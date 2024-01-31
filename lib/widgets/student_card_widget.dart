@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:sqlite_db/widgets/student_item_info_widget.dart';
 import '../models/student.dart';

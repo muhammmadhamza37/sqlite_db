@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
-
 import '../db/database_helper.dart';
 import '../models/student.dart';
 import '../widgets/student_card_widget.dart';
@@ -24,11 +22,11 @@ class _StudentListScreenState extends State<StudentListScreen> {
         future: DatabaseHelper.instance.getAllStudents(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
-            if( snapshot.data.isEmpty){
-              return const Center(
-                child: Text('No students found'),
-              );
-            }
+            // if( snapshot.data.isEmpty){
+            //   return const Center(
+            //     child: Text('No students found'),
+            //   );
+            // }
 
 
             List<Student> students = snapshot.data;

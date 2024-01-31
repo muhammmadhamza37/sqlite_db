@@ -46,7 +46,7 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                   return null;
                 },
               ),
-              const SizedBox(
+               const SizedBox(
                 height: 16,
               ),
               TextFormField(
@@ -58,12 +58,17 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
                   if (text == null || text.isEmpty) {
                     return 'Please provide value';
                   }
-
-                  email = text;
-                  return null;
-                },
+                 final bool emailValid =
+                RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                         .hasMatch(text);
+                if (emailValid == false) {
+                 return ' Enter Valid Email qari@gmail.com';
+                  }
+                     email = text;
+                     return null;
+                   },
               ),
-              const SizedBox(
+               const SizedBox(
                 height: 16,
               ),
               TextFormField(
